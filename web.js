@@ -4,6 +4,8 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
+var data;
+
 app.get('/', function(request, response) {
 
    fs.readFile('./index.html', "utf8", function(err,data) {
