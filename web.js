@@ -8,7 +8,7 @@ app.use(express.logger());
 
 app.get('/', function(request, response) {
 
-   response.send(readFileSync("./index.html","utf8").toString());
+   response.send(readFileSync("./index.html","utf8"));
 
   });
 
