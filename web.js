@@ -10,7 +10,7 @@ var buf = new Buffer();
 
 app.get('/', function(request, response) {
 
-   response.send(readFileSync("./index.html").toString());
+   response.send(readFileSync("./index.html","utf8").toString());
 
   });
 
