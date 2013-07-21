@@ -11,13 +11,15 @@ app.get('/', function(request, response) {
    fs.readFile('./index.html', "utf8", function(err,data) {
 
 	if (err) {
+		console.log("failed ..");
 		throw err;
 	}
 
      	console.log(data);
+
+	response.send(data);
   });
 
-  response.send(data);
 
 });
 
