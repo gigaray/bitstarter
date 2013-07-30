@@ -37,7 +37,7 @@ var assertURLExists = function(inURL) {
 
     var inURLstr = inURL.toString();
 
-    console.log ('trying to get %s ...', inURLstr);
+//    console.log ('trying to get %s ...', inURLstr);
 
     rest.get(inURLstr).on('complete', function(result) {
 	if (result instanceof Error) {
@@ -46,7 +46,7 @@ var assertURLExists = function(inURL) {
 	}
     });
 
-    console.log('... success !!');
+//   console.log('... success !!');
 
     return inURLstr;
 }
@@ -107,11 +107,9 @@ if(require.main == module) {
     var checkJson;
     var outJson;
 
-    console.log('routed via ' + (program.url ? "URL" : "HTML" ));
+//    console.log('routed via ' + (program.url ? "URL" : "HTML" ));
 
     if (program.url) {
-
-	console.log
 
 	rest.get(program.url).on('complete', function(result) {
 
@@ -125,7 +123,9 @@ if(require.main == module) {
 
 	      var outJSON = JSON.stringify(checkJSON, null, 4);
 
-	      console.log(' -->  %s  <-- ', outJSON);
+//	      console.log(' -->  %s  <-- ', outJSON);
+
+	      console.log('%s', outJSON);
 
 	      fs.unlinkSync('hw3Temp.buf');
 	});
