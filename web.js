@@ -6,6 +6,8 @@ var app = express.createServer(express.logger());
 
 var data;
 
+app.use(express.static(__dirname + '/res'));
+
 app.get('/', function(request, response) {
 
    fs.readFile('./index.html', "utf8", function(err,data) {
